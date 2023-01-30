@@ -66,7 +66,3 @@ class SpellChecker:
                 max_mistakes_number_part=max_mistakes_number_part,
             )
         ]
-
-    @property
-    def prefix_tree(self):
-        return self.__vocab.prefix_tree
