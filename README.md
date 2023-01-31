@@ -4,7 +4,6 @@ Simple Spell Checker is a spell checker based on prefix tree search. It find nea
 The algorithm finds mistakes in a word (insertions, deletions, replacements).
 
 # Installation
-The easiest method to install is using pip:
 
 > pip install simple_spell_checker
 
