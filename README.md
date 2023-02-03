@@ -1,5 +1,12 @@
 # simple_spell_checker
 
+[![Coverage Status](https://img.shields.io/badge/%20Python%20Versions-%3E%3D3.9-informational)](https://pypi.org/project/fuzzy_multi_dict/)
+[![Coverage Status](https://coveralls.io/repos/github/SemioTricks/fuzzy-multi-dict/badge.svg?branch=feature/initial)](https://coveralls.io/github/SemioTricks/fuzzy-multi-dict?branch=feature/initial)
+
+[![Coverage Status](https://img.shields.io/badge/Version-0.0.1-informational)](https://github.com/SemioTricks/simple-spell-checker)
+[![Coverage Status](https://img.shields.io/badge/Docs-passed-green)](https://github.com/SemioTricks/simple-spell-checker/tree/main/simple_spell_checker_doc)
+
+
 Simple Spell Checker is a spell checker based on prefix tree search. It find nearest to input word from known words (from input list). 
 The algorithm finds mistakes in a word (insertions, deletions, replacements).
 
