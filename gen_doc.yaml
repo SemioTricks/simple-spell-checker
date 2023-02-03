@@ -2,7 +2,7 @@ PROJECT:
   # Project name
   title: "simple_spell_checker"
   # Project description
-  description: ""
+  description: "Simple Spell Checker is a spell checker based on prefix tree search. It find nearest to input word from known words (from input list). The algorithm finds mistakes in a word (insertions, deletions, replacements)."
   # Repository URL
   repository: ""
   # Project version
@@ -25,7 +25,7 @@ OPTIONS:
   # If not specified, the documentation will be saved where the command was called from
   path_to_root_folder: "./simple_spell_checker"
   extract_with_same_hierarchy: True
-  overwrite_if_file_exists: False
+  overwrite_if_file_exists: True
   # If not specified, the documentation will be saved where the command was called from
   path_to_save: ""
   # File name to save the documentation
