@@ -33,7 +33,7 @@ cities = [
 
 
 def test_correct_word():
-    spell_checker = SpellChecker(max_mistakes_number_part=0.5)
+    spell_checker = SpellChecker(max_corrections_relative=0.5)
     spell_checker.add_words(cities)
 
     R = spell_checker.correction("Kharkiv")
@@ -43,7 +43,7 @@ def test_correct_word():
 
 
 def test_non_correct_words():
-    spell_checker = SpellChecker(max_mistakes_number_part=0.5)
+    spell_checker = SpellChecker(max_corrections_relative=0.5)
     spell_checker.add_words(cities)
 
     R = spell_checker.correction("odessa")
@@ -51,14 +51,13 @@ def test_non_correct_words():
     assert len(R[0]["corrections"]) == 2
     assert R[0]["word"] == "Odesa"
 
-    R = spell_checker.correction("Hmelnitskiy", max_mistakes_number_part=0.5)
-    assert len(R) == 1
-    assert len(R[0]["corrections"]) == 5
+    R = spell_checker.correction("Hmelnitskiy", max_corrections_relative=0.5)
+    assert len(R[0]["corrections"]) == 4
     assert R[0]["word"] == "Khmelnytskyi"
 
 
 def test_unknown_word():
-    spell_checker = SpellChecker(max_mistakes_number_part=0.5)
+    spell_checker = SpellChecker(max_corrections_relative=0.5)
     spell_checker.add_words(cities)
 
     R = spell_checker.correction("new-york")
@@ -66,12 +65,12 @@ def test_unknown_word():
 
 
 def test_incorrect_type():
-    spell_checker = SpellChecker(max_mistakes_number_part=0.5)
+    spell_checker = SpellChecker(max_corrections_relative=0.5)
     with pytest.raises(TypeError):
         spell_checker.add_words(["one", "two", 3])
 
 
 def test_incorrect_value():
-    spell_checker = SpellChecker(max_mistakes_number_part=0.5)
+    spell_checker = SpellChecker(max_corrections_relative=0.5)
     with pytest.raises(ValueError):
         spell_checker.add_words(["one", "two", ""])

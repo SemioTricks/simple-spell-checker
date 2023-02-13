@@ -1,9 +1,9 @@
 # simple_spell_checker
 
-[![Coverage Status](https://img.shields.io/badge/%20Python%20Versions-%3E%3D3.9-informational)](https://pypi.org/project/simple-spell-checker)
+[![Coverage Status](https://img.shields.io/badge/%20Python%20Versions-%3E%3D3.9-informational)](https://pypi.org/project/simple-spell-checker/)
 [![Coverage Status](https://coveralls.io/repos/github/SemioTricks/simple-spell-checker/badge.svg?branch=main)](https://coveralls.io/github/SemioTricks/simple-spell-checker?branch=main)
 
-[![Coverage Status](https://img.shields.io/badge/Version-0.0.1-informational)](https://github.com/SemioTricks/simple-spell-checker)
+[![Coverage Status](https://img.shields.io/badge/Version-0.0.2-informational)](https://github.com/SemioTricks/simple-spell-checker)
 [![Coverage Status](https://img.shields.io/badge/Docs-passed-green)](https://github.com/SemioTricks/simple-spell-checker/tree/main/simple_spell_checker_doc)
 
 
@@ -26,7 +26,7 @@ cities = [
     "Rivne", "Ivano-Frankivsk", "Ternopil", "Kropyvnytskyi", "Lutsk", "Uzhhorod"
 ]
 
-spell_checker = SpellChecker(max_mistakes_number_part=.5)
+spell_checker = SpellChecker(max_corrections_relative=.5)
 spell_checker.add_words(cities)
 
 spell_checker.correction('Kiev')
@@ -40,7 +40,7 @@ spell_checker.correction('odessa')
 #     'position': 0},
 #    {'mistake_type': 'extra symbol "s"', 'position': 4}]}]
 
-spell_checker.correction('Hmelnitskiy', max_mistakes_number_part=.5)
+spell_checker.correction('Hmelnitskiy', max_corrections_relative=.5)
 # [{'word': 'Khmelnytskyi',
 #   'corrections': [{'mistake_type': 'missing symbol "K"', 'position': 0},
 #    {'mistake_type': 'wrong symbol "H": replaced on "h"', 'position': 0},
