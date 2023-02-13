@@ -1,9 +1,9 @@
 # simple_spell_checker
 
-[![Coverage Status](https://img.shields.io/badge/%20Python%20Versions-%3E%3D3.9-informational)](https://pypi.org/project/simple-spell-checker)
+[![Coverage Status](https://img.shields.io/badge/%20Python%20Versions-%3E%3D3.9-informational)](https://pypi.org/project/simple-spell-checker/)
 [![Coverage Status](https://coveralls.io/repos/github/SemioTricks/simple-spell-checker/badge.svg?branch=main)](https://coveralls.io/github/SemioTricks/simple-spell-checker?branch=main)
 
-[![Coverage Status](https://img.shields.io/badge/Version-0.0.1-informational)](https://github.com/SemioTricks/simple-spell-checker)
+[![Coverage Status](https://img.shields.io/badge/Version-0.0.2-informational)](https://github.com/SemioTricks/simple-spell-checker)
 [![Coverage Status](https://img.shields.io/badge/Docs-passed-green)](https://github.com/SemioTricks/simple-spell-checker/tree/main/simple_spell_checker_doc)
 
 

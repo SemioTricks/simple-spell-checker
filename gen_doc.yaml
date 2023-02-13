@@ -6,7 +6,7 @@ PROJECT:
   # Repository URL
   repository: ""
   # Project version
-  release: "0.0.1"
+  release: "0.0.2"
 AUTHOR:
   # Author full info
   author: "Tetiana Lytvynenko, Denis Shchutskyi"
@@ -27,7 +27,7 @@ OPTIONS:
   extract_with_same_hierarchy: True
   overwrite_if_file_exists: True
   # If not specified, the documentation will be saved where the command was called from
-  path_to_save: ""
+  path_to_save: "./docs"
   # File name to save the documentation
   # Used if argument: `extract_with_same_hierarchy: False`
   file_to_save: ""
