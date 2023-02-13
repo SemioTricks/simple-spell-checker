@@ -8,7 +8,7 @@ packages = [{include = "simple_spell_checker"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fuzzy-multi-dict = "^0.0.3"
+fuzzy-multi-dict = "^0.0.4"
 
 
 [build-system]
