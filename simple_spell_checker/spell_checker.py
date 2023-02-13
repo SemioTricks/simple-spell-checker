@@ -12,21 +12,21 @@ class SpellChecker:
     """
     def __init__(
         self,
-        max_mistakes_number: Optional[int] = 3,
-        max_mistakes_number_part: Optional[float] = None,
+        max_corrections: Optional[int] = 2,
+        max_corrections_relative: Optional[float] = None,
     ):
         """
-        :param Optional[int] max_mistakes_number: default value of maximum number
+        :param Optional[int] max_corrections: default value of maximum number
                of corrections in the query key when searching for a matching key
-        :param Optional[float] max_mistakes_number_part: default value to calculate
+        :param Optional[float] max_corrections_relative: default value to calculate
                maximum number of corrections in the query key when searching
                for a matching dictionary key;
                calculated as round(max_mistakes_number_part * token_length)
 
         """
         self.__vocab = FuzzyMultiDict(
-            max_mistakes_number=max_mistakes_number,
-            max_mistakes_number_part=max_mistakes_number_part,
+            max_corrections=max_corrections,
+            max_corrections_relative=max_corrections_relative,
         )
 
     def add_words(self, words: List[str]):
@@ -43,13 +43,13 @@ class SpellChecker:
     def correction(
         self,
         word: str,
-        max_mistakes_number: Optional[int] = None,
-        max_mistakes_number_part: Optional[float] = None,
+        max_corrections: Optional[int] = 2,
+        max_corrections_relative: Optional[float] = None,
     ) -> List[Dict[str, Any]]:
         """
         :param word: word to correct
-        :param int max_mistakes_number: maximum number of corrections in the word
-        :param max_mistakes_number_part: value to calculate maximum number
+        :param int max_corrections: maximum number of corrections in the word
+        :param float max_corrections_relative: value to calculate maximum number
                of corrections in the word;
                if not None - `max_mistakes_number` will be ignored;
                calculated as round(max_mistakes_number_part * word_length);
@@ -65,10 +65,10 @@ class SpellChecker:
 
         """
         return [
-            {"word": row["value"], "corrections": row["mistakes"]}
+            {"word": row["value"], "corrections": row["correction"]}
             for row in self.__vocab.get(
-                key=word,
-                max_mistakes_number=max_mistakes_number,
-                max_mistakes_number_part=max_mistakes_number_part,
+                query=word,
+                max_corrections=max_corrections,
+                max_corrections_relative=max_corrections_relative,
             )
         ]

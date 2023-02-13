@@ -26,7 +26,7 @@ cities = [
     "Rivne", "Ivano-Frankivsk", "Ternopil", "Kropyvnytskyi", "Lutsk", "Uzhhorod"
 ]
 
-spell_checker = SpellChecker(max_mistakes_number_part=.5)
+spell_checker = SpellChecker(max_corrections_relative=.5)
 spell_checker.add_words(cities)
 
 spell_checker.correction('Kiev')
@@ -40,7 +40,7 @@ spell_checker.correction('odessa')
 #     'position': 0},
 #    {'mistake_type': 'extra symbol "s"', 'position': 4}]}]
 
-spell_checker.correction('Hmelnitskiy', max_mistakes_number_part=.5)
+spell_checker.correction('Hmelnitskiy', max_corrections_relative=.5)
 # [{'word': 'Khmelnytskyi',
 #   'corrections': [{'mistake_type': 'missing symbol "K"', 'position': 0},
 #    {'mistake_type': 'wrong symbol "H": replaced on "h"', 'position': 0},
